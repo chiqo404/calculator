@@ -11,3 +11,14 @@ function operate(a,op,b){
     if(op == '*') multiply(a,b);
     if(op == '/') divide(a,b);
 }
+const display = document.querySelector("#screen");
+const digits = document.querySelectorAll(".digit");
+digits.forEach(button => {
+    button.addEventListener("click", () => {
+        a = button.textContent;
+        const num = document.createElement("number");
+        num.textContent = a;
+        display.append(num);
+        console.log(a);
+    });
+});
