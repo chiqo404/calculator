@@ -28,21 +28,20 @@ digits.forEach(button => {
             old.textContent = "";
             op = '';
         }
-        if(button.textContent == '.'){
+        if(button.textContent == '.' && !a.includes('.')){
              a = +a + '.';
              display.textContent = a;
         }
         else{
-             a += button.textContent;
+            if(button.textContent != '.')  a += button.textContent;
              display.textContent = +a;
         }
     });
 });
 del.addEventListener("click", () => {
     if(display.textContent != "ERROR"){
-        a -= (a%10);
-        a = a / 10;
-        display.textContent = +a;
+        a = a.slice(0,-1);
+        display.textContent = a;
         console.log(a);
     }
 });
