@@ -3,6 +3,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+    background-color:rgb(210, 206, 206);
 }
 #calc{
     display:flex;
@@ -12,12 +13,14 @@ body{
     height:90vh;
     justify-content:space-between;
     align-items:center;
+    border:5px solid black;
 }
 #buttons{
     width:100%;
     display:flex;
     flex-wrap:wrap;
     height:100%;
+    border:0;
 }
 button{
     /* margin:0px; */
@@ -25,7 +28,26 @@ button{
     width:calc(100%/4);
     height:calc(100%/5);
     background-color:whitesmoke;
-        font-size:32px;
+    font-size:32px;
+    cursor:pointer;
+}
+.digit:hover{
+    background-color:rgb(221, 221, 221);
+}
+.cline:hover{
+    background-color:rgb(221, 221, 221);
+}
+.clear:hover{
+    background-color:rgb(221, 221, 221);
+}
+.delete:hover{
+    background-color:rgb(221, 221, 221);
+}
+.mp:hover{
+    background-color:rgb(221, 221, 221);
+}
+.operation:hover{
+    background-color:rgb(233, 188, 105);
 }
 #screen{
     display:flex;
@@ -54,6 +76,7 @@ button{
 } 
 .cantPress{
     background-color:rgb(233, 188, 105);
+    
 }
 /* .number{
     
